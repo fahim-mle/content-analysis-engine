@@ -17,14 +17,14 @@ ML_DATASET_FILE = DATA_DIR / "metadata" / "ml_dataset.json.gz"
 EMBEDDINGS_FILE = EMBEDDINGS_DIR / "embeddings.npy"
 TOPIC_MODEL_FILE = TOPIC_MODEL_DIR / "bertopic_model.pkl"
 
-# Model Configuration
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+# Model Configuration - Optimized for 4GB GPU
+EMBEDDING_MODEL = "distilbert-base-uncased"  # Better than MiniLM, fits 4GB GPU
 TOPIC_MODEL_TYPE = "bertopic"  # or "lda"
 NUM_TOPICS = 10
 NUM_CLUSTERS = 5
 
-# Training Parameters
-BATCH_SIZE = 32
+# Training Parameters - GPU-optimized
+BATCH_SIZE = 16  # Reduced for GPU memory
 MAX_EPOCHS = 100
 LEARNING_RATE = 0.001
 

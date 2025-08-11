@@ -1,37 +1,37 @@
 ================================================================================
 COMPREHENSIVE MODEL EVALUATION REPORT
 ================================================================================
-Generated: 2025-08-11T21:39:30
+Generated: 2025-08-11T22:57:42
 
 📊 CLASSIFICATION PERFORMANCE
 ----------------------------------------
-Overall Assessment: Excellent
-Accuracy: 0.966
-F1 Weighted: 0.949
-F1 Macro: 0.327
-Classes Handled: 3
-Test Samples: 87
+Overall Assessment: Fair
+Accuracy: 0.790
+F1 Weighted: 0.752
+F1 Macro: 0.342
+Classes Handled: 6
+Test Samples: 124
 
 ⚠️  IMBALANCE DETECTED:
-   Performance gap: 0.621 (F1 weighted - F1 macro)
+   Performance gap: 0.409 (F1 weighted - F1 macro)
    This suggests significant class imbalance in the dataset.
 
 🔍 CLUSTERING ANALYSIS
 ----------------------------------------
 Best Clustering Method: kmeans_tfidf
-Best Silhouette Score: 0.015
+Best Silhouette Score: 0.009
 
 KMEANS_TFIDF:
    Assessment: Poor clustering
-   Clusters: 13
-   Silhouette: 0.015
+   Clusters: 5
+   Silhouette: 0.009
 
 📈 DATA COMPOSITION INSIGHTS
 ----------------------------------------
 KMEANS_TFIDF - Top Categories:
-   cs.AI: 287
-   cs.CL: 8
-   cs.LG: 8
+   cs.AI: 384
+   cs.LG: 100
+   cs.CL: 37
 
 ⚙️  HARDWARE COMPLIANCE
 ----------------------------------------
@@ -44,7 +44,7 @@ KMEANS_TFIDF - Top Categories:
 
 🎯 RECOMMENDATIONS
 ----------------------------------------
-📍 Classification: Address class imbalance with sampling techniques
+📍 Classification: Consider data augmentation or feature engineering
 📍 Clustering: Consider different features or preprocessing
 
 ================================================================================

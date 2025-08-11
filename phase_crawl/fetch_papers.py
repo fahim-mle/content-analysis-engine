@@ -7,18 +7,18 @@ from typing import Any, Dict, List
 import feedparser
 import requests
 
-from .config import CATEGORIES, DAYS_BACK, MAX_RESULTS, REQUEST_TIMEOUT
+from .config import CATEGORIES, DAYS_BACK, MAX_RESULTS_PER_CATEGORY, REQUEST_TIMEOUT
 from .utils import get_logger
 
 logger = get_logger(__name__)
 
 
-def build_query(categories: List[str], max_results: int, days_back: int) -> str:
+def build_query_for_category(category: str, max_results: int, days_back: int) -> str:
     """
-    Build ArXiv API URL with filters.
+    Build ArXiv API URL for a single category.
 
     Args:
-        categories: List of ArXiv categories to search
+        category: ArXiv category to search
         max_results: Maximum number of results to return
         days_back: Number of days back from today to search
 
@@ -27,12 +27,8 @@ def build_query(categories: List[str], max_results: int, days_back: int) -> str:
     """
     base_url = "http://export.arxiv.org/api/query?"
 
-    # Build category query
-    if categories:
-        cat_query = " OR ".join([f"cat:{cat}" for cat in categories])
-        search_query = f"({cat_query})"
-    else:
-        search_query = "all"
+    # Build category query for single category
+    search_query = f"cat:{category}"
 
     # Add date range
     end_date = datetime.now()
@@ -118,3 +114,27 @@ def _parse_entry(entry: feedparser.FeedParserDict) -> Dict[str, Any]:
         "pdf_downloaded": False,
         "pdf_processed": False,
     }
+
+
+def fetch_balanced_papers() -> List[Dict[str, Any]]:
+    """
+    Fetch equal numbers of papers from each category for balanced dataset.
+
+    Returns:
+        List of paper dictionaries with balanced categories
+    """
+    all_papers = []
+    
+    for category in CATEGORIES:
+        logger.info(f"Fetching {MAX_RESULTS_PER_CATEGORY} papers from {category}")
+        query_url = build_query_for_category(category, MAX_RESULTS_PER_CATEGORY, DAYS_BACK)
+        papers = fetch_papers(query_url)
+        
+        # Add category filter to ensure correct categorization
+        filtered_papers = [p for p in papers if category in p["categories"]]
+        logger.info(f"Got {len(filtered_papers)} papers for {category}")
+        
+        all_papers.extend(filtered_papers[:MAX_RESULTS_PER_CATEGORY])
+    
+    logger.info(f"Total balanced papers collected: {len(all_papers)}")
+    return all_papers

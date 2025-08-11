@@ -13,12 +13,12 @@ CHROMA_PATH = "./chroma_db"
 CHROMA_COLLECTION = "arxiv_embeddings"
 
 # ArXiv Search Configuration
-CATEGORIES = ["cs.AI", "cs.LG", "cs.CL"]
-MAX_RESULTS = 10
-DAYS_BACK = 90
+CATEGORIES = ["cs.GR", "cs.LG", "cs.CL"]
+MAX_RESULTS_PER_CATEGORY = 100  # Balanced download per category
+DAYS_BACK = 365  # Increased to get more papers
 
 # PDF Processing Limits
-MAX_PDF_COUNT = 400  # Don't download more if we already have this many
+MAX_PDF_COUNT = 300  # Total across all categories (100 per category)
 
 # Directory Paths
 BASE_DIR = Path(".")

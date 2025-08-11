@@ -6,12 +6,12 @@ from pathlib import Path
 
 from .config import (
     CATEGORIES, CHROMA_COLLECTION, CHROMA_PATH, DAYS_BACK, DB_NAME,
-    EMBEDDING_TEXT_LENGTH, MAX_PDF_COUNT, MAX_RESULTS, MAX_TEXT_LENGTH,
+    EMBEDDING_TEXT_LENGTH, MAX_PDF_COUNT, MAX_RESULTS_PER_CATEGORY, MAX_TEXT_LENGTH,
     MONGO_URI, PDF_DIR, RATE_LIMIT_DELAY,
 )
 from .download_pdf import download_pdf
 from .extract_text import extract_text
-from .fetch_papers import build_query, fetch_papers
+from .fetch_papers import fetch_balanced_papers
 from .process_existing import get_existing_pdfs, process_existing_pdfs
 from .store_chromadb import get_chroma_collection, store_embedding
 from .store_mongodb import connect_mongo, upsert_paper_metadata
@@ -53,15 +53,9 @@ def run_crawl_phase() -> bool:
             logger.info("Skipping new downloads, crawl phase complete")
             return True
         
-        # Calculate how many new papers we can download
-        remaining_slots = MAX_PDF_COUNT - current_pdf_count
-        download_limit = min(MAX_RESULTS, remaining_slots)
-        
-        logger.info(f"Can download up to {download_limit} new papers")
-        
-        # Build query and fetch papers
-        query_url = build_query(CATEGORIES, download_limit, DAYS_BACK)
-        papers = fetch_papers(query_url)
+        # Fetch balanced papers from all categories
+        logger.info(f"Fetching balanced dataset ({MAX_RESULTS_PER_CATEGORY} per category)")
+        papers = fetch_balanced_papers()
         
         if not papers:
             logger.warning("No new papers found")

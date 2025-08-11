@@ -2,16 +2,17 @@
 """Generate and save embeddings for text data."""
 
 import numpy as np
+import torch
 from sentence_transformers import SentenceTransformer
 from .config import (DATA_DIR, EMBEDDINGS_DIR, ML_DATASET_FILE, 
-                     EMBEDDING_MODEL, EMBEDDINGS_FILE)
+                     EMBEDDING_MODEL, EMBEDDINGS_FILE, BATCH_SIZE)
 from .utils import get_logger, load_ml_dataset
 
 logger = get_logger(__name__)
 
 def generate_embeddings(documents: list[str], model_name: str) -> np.ndarray:
     """
-    Generate sentence embeddings for a list of documents.
+    Generate sentence embeddings for a list of documents with GPU optimization.
 
     Args:
         documents: A list of text documents to embed.
@@ -21,12 +22,28 @@ def generate_embeddings(documents: list[str], model_name: str) -> np.ndarray:
         A numpy array of embeddings.
     """
     try:
+        # Check GPU availability
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        logger.info(f"Using device: {device}")
+        
         logger.info(f"Loading sentence transformer model: {model_name}")
-        model = SentenceTransformer(model_name)
+        model = SentenceTransformer(model_name, device=device)
+        
+        # Set to evaluation mode for inference
+        model.eval()
+        
         logger.info("Model loaded. Generating embeddings...")
-        embeddings = model.encode(documents, show_progress_bar=True)
-        logger.info(f"Generated {len(embeddings)} embeddings.")
+        # Use batch_size for GPU memory optimization
+        embeddings = model.encode(
+            documents, 
+            show_progress_bar=True,
+            batch_size=BATCH_SIZE,
+            convert_to_numpy=True
+        )
+        
+        logger.info(f"Generated {len(embeddings)} embeddings using {model_name}")
         return embeddings
+        
     except Exception as e:
         logger.error(f"Failed to generate embeddings: {e}")
         return np.array([])

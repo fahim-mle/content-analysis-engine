@@ -4,6 +4,7 @@
 from typing import Any, Dict
 
 import chromadb
+from chromadb.utils import embedding_functions
 
 from .config import CHROMA_COLLECTION, CHROMA_PATH
 from .utils import get_logger
@@ -13,7 +14,7 @@ logger = get_logger(__name__)
 
 def get_chroma_collection(path: str, name: str):
     """
-    Get or create ChromaDB collection.
+    Get or create ChromaDB collection with DistilBERT embeddings.
 
     Args:
         path: Path to ChromaDB storage
@@ -24,11 +25,19 @@ def get_chroma_collection(path: str, name: str):
     """
     try:
         client = chromadb.PersistentClient(path=path)
+        
+        # Use DistilBERT embedding function for consistency
+        embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
+            model_name="distilbert-base-uncased"
+        )
+        
         collection = client.get_or_create_collection(
-            name=name, metadata={"description": "ArXiv paper embeddings"}
+            name=name, 
+            metadata={"description": "ArXiv paper embeddings with DistilBERT"},
+            embedding_function=embedding_fn
         )
 
-        logger.info(f"Connected to ChromaDB collection: {name}")
+        logger.info(f"Connected to ChromaDB collection: {name} with DistilBERT")
         return collection
 
     except Exception as e:
