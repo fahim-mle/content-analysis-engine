@@ -1,0 +1,122 @@
+{
+  "classification_performance": {
+    "overall_metrics": {
+      "accuracy": 0.9655172413793104,
+      "f1_weighted": 0.9485783424077435,
+      "f1_macro": 0.32748538011695905,
+      "num_classes": 3,
+      "test_samples": 87
+    },
+    "class_performance": {
+      "cs.AI": {
+        "precision": 0.9655172413793104,
+        "recall": 1.0,
+        "f1_score": 0.9824561403508771,
+        "support": 84.0
+      },
+      "cs.CL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 2.0
+      },
+      "cs.CV": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 1.0
+      },
+      "macro avg": {
+        "precision": 0.3218390804597701,
+        "recall": 0.3333333333333333,
+        "f1_score": 0.32748538011695905,
+        "support": 87.0
+      },
+      "weighted avg": {
+        "precision": 0.9322235434007136,
+        "recall": 0.9655172413793104,
+        "f1_score": 0.9485783424077435,
+        "support": 87.0
+      }
+    },
+    "model_comparison": {
+      "SVM": {
+        "cv_score_mean": 0.9415267057733869,
+        "cv_score_std": 0.01725381552380313,
+        "test_f1": 0.9485783424077435
+      },
+      "LogisticRegression": {
+        "cv_score_mean": 0.9415267057733869,
+        "cv_score_std": 0.01725381552380313,
+        "test_f1": 0.9485783424077435
+      }
+    },
+    "data_insights": {
+      "class_imbalance_detected": true,
+      "performance_gap": 0.6210929622907845
+    },
+    "assessment": "Excellent"
+  },
+  "clustering_evaluation": {
+    "kmeans_tfidf": {
+      "method": "kmeans_tfidf",
+      "quality_metrics": {
+        "silhouette_score": 0.014744740155325729,
+        "calinski_harabasz_score": 2.1461372437108666,
+        "inertia": 260.19300580701525
+      },
+      "cluster_info": {
+        "num_clusters": 13,
+        "method_type": "K-Means"
+      },
+      "assessment": "Poor clustering"
+    },
+    "best_method": "kmeans_tfidf",
+    "best_silhouette": 0.014744740155325729
+  },
+  "cluster_composition": {
+    "kmeans_tfidf": {
+      "total_clusters": 13,
+      "cluster_sizes": [
+        9,
+        20,
+        8,
+        15,
+        35,
+        22,
+        15,
+        11,
+        43,
+        37,
+        22,
+        56,
+        3
+      ],
+      "category_distribution": {
+        "cs.AI": 287,
+        "cs.CL": 8,
+        "cs.LG": 8,
+        "cs.CV": 5,
+        "cs.IR": 2,
+        "cs.GT": 2,
+        "eess.IV": 1,
+        "eess.SP": 1,
+        "physics.soc-ph": 1,
+        "cond-mat.dis-nn": 1
+      },
+      "quality_insights": {
+        "avg_cluster_quality": 0.0,
+        "quality_std": 0.0,
+        "min_quality": 0.0,
+        "max_quality": 0.0
+      },
+      "size_insights": {
+        "avg_cluster_size": 22.76923076923077,
+        "size_std": 15.018725983834807,
+        "min_size": 3,
+        "max_size": 56,
+        "size_imbalance": 18.666666666666668
+      }
+    }
+  }
+}
