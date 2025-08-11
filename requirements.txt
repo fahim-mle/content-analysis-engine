@@ -9,3 +9,7 @@ sentence-transformers
 python-dotenv
 numpy
 pandas
+matplotlib
+seaborn
+gensim
+nltk

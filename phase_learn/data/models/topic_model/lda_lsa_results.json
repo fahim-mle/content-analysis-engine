@@ -1,0 +1,702 @@
+{
+  "lda": {
+    "perplexity": 88.77818002852923,
+    "topics": [
+      {
+        "topic_id": 0,
+        "words": [
+          [
+            "discusses",
+            0.10112152342289896
+          ],
+          [
+            "meaningful content",
+            0.1011083122813353
+          ],
+          [
+            "discusses natural",
+            0.10102916400733511
+          ],
+          [
+            "language processing",
+            0.10100442571324808
+          ],
+          [
+            "contains",
+            0.1009994260773742
+          ],
+          [
+            "meaningful",
+            0.10097967929864494
+          ],
+          [
+            "learning",
+            0.10097192145451919
+          ],
+          [
+            "paper contains",
+            0.10095795338270368
+          ],
+          [
+            "processing techniques",
+            0.10094480375871662
+          ],
+          [
+            "contains meaningful",
+            0.10093172608201116
+          ]
+        ],
+        "top_words": [
+          "discusses",
+          "meaningful content",
+          "discusses natural",
+          "language processing",
+          "contains",
+          "meaningful",
+          "learning",
+          "paper contains",
+          "processing techniques",
+          "contains meaningful"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "words": [
+          [
+            "machine",
+            0.10106157194294334
+          ],
+          [
+            "natural language",
+            0.10105862290496939
+          ],
+          [
+            "paper contains",
+            0.10104741825435012
+          ],
+          [
+            "contains",
+            0.10103528183002404
+          ],
+          [
+            "discusses",
+            0.10102595675700232
+          ],
+          [
+            "natural",
+            0.10101199091585834
+          ],
+          [
+            "machine learning",
+            0.10098073814122438
+          ],
+          [
+            "content machine",
+            0.10096710155865168
+          ],
+          [
+            "discusses natural",
+            0.10096438161489091
+          ],
+          [
+            "language",
+            0.10093408772927727
+          ]
+        ],
+        "top_words": [
+          "machine",
+          "natural language",
+          "paper contains",
+          "contains",
+          "discusses",
+          "natural",
+          "machine learning",
+          "content machine",
+          "discusses natural",
+          "language"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "words": [
+          [
+            "discusses natural",
+            0.10111982303706961
+          ],
+          [
+            "contains meaningful",
+            0.10109567519412953
+          ],
+          [
+            "paper contains",
+            0.10105160824670902
+          ],
+          [
+            "meaningful content",
+            0.10104564090825441
+          ],
+          [
+            "contains",
+            0.10103416777529647
+          ],
+          [
+            "content",
+            0.10098478457007523
+          ],
+          [
+            "machine",
+            0.10098429780541637
+          ],
+          [
+            "natural",
+            0.10098124067865881
+          ],
+          [
+            "processing techniques",
+            0.10097773112458959
+          ],
+          [
+            "techniques",
+            0.10097396723953056
+          ]
+        ],
+        "top_words": [
+          "discusses natural",
+          "contains meaningful",
+          "paper contains",
+          "meaningful content",
+          "contains",
+          "content",
+          "machine",
+          "natural",
+          "processing techniques",
+          "techniques"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "words": [
+          [
+            "machine",
+            0.10122766047917468
+          ],
+          [
+            "natural language",
+            0.10110104018834062
+          ],
+          [
+            "meaningful content",
+            0.10107127513337022
+          ],
+          [
+            "natural",
+            0.10102744766653068
+          ],
+          [
+            "content machine",
+            0.10098936959732527
+          ],
+          [
+            "meaningful",
+            0.10097831369574682
+          ],
+          [
+            "discusses",
+            0.10097359153823099
+          ],
+          [
+            "techniques",
+            0.10095346416880395
+          ],
+          [
+            "learning",
+            0.10095258201986228
+          ],
+          [
+            "language processing",
+            0.10094343368195108
+          ]
+        ],
+        "top_words": [
+          "machine",
+          "natural language",
+          "meaningful content",
+          "natural",
+          "content machine",
+          "meaningful",
+          "discusses",
+          "techniques",
+          "learning",
+          "language processing"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "words": [
+          [
+            "paper discusses",
+            0.1011552867403035
+          ],
+          [
+            "contains meaningful",
+            0.10111810954979294
+          ],
+          [
+            "discusses",
+            0.10103427844178367
+          ],
+          [
+            "techniques",
+            0.10103134311307811
+          ],
+          [
+            "machine",
+            0.10103076027480229
+          ],
+          [
+            "machine learning",
+            0.10100217575086413
+          ],
+          [
+            "processing",
+            0.10099693707104324
+          ],
+          [
+            "meaningful",
+            0.10097782328825691
+          ],
+          [
+            "natural language",
+            0.10097740239485568
+          ],
+          [
+            "learning",
+            0.10097384111930434
+          ]
+        ],
+        "top_words": [
+          "paper discusses",
+          "contains meaningful",
+          "discusses",
+          "techniques",
+          "machine",
+          "machine learning",
+          "processing",
+          "meaningful",
+          "natural language",
+          "learning"
+        ]
+      },
+      {
+        "topic_id": 5,
+        "words": [
+          [
+            "language processing",
+            0.10110690859412824
+          ],
+          [
+            "contains",
+            0.10105101655914293
+          ],
+          [
+            "natural",
+            0.10102325340704442
+          ],
+          [
+            "learning",
+            0.10101352540509381
+          ],
+          [
+            "meaningful",
+            0.10099787669689889
+          ],
+          [
+            "natural language",
+            0.1009968719007541
+          ],
+          [
+            "contains meaningful",
+            0.100990314564385
+          ],
+          [
+            "discusses natural",
+            0.10098257603991438
+          ],
+          [
+            "processing techniques",
+            0.10096894180485337
+          ],
+          [
+            "language",
+            0.10094759483956786
+          ]
+        ],
+        "top_words": [
+          "language processing",
+          "contains",
+          "natural",
+          "learning",
+          "meaningful",
+          "natural language",
+          "contains meaningful",
+          "discusses natural",
+          "processing techniques",
+          "language"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "words": [
+          [
+            "natural language",
+            1.1001540751207033
+          ],
+          [
+            "processing",
+            1.1000098403411458
+          ],
+          [
+            "discusses",
+            1.1000091666444767
+          ],
+          [
+            "discusses natural",
+            1.1000058617662483
+          ],
+          [
+            "techniques",
+            1.0999641307460652
+          ],
+          [
+            "language",
+            1.0999460931363343
+          ],
+          [
+            "language processing",
+            1.0999459512364889
+          ],
+          [
+            "natural",
+            1.09986613228102
+          ],
+          [
+            "paper discusses",
+            1.0998419500643208
+          ],
+          [
+            "processing techniques",
+            1.0998173238182674
+          ]
+        ],
+        "top_words": [
+          "natural language",
+          "processing",
+          "discusses",
+          "discusses natural",
+          "techniques",
+          "language",
+          "language processing",
+          "natural",
+          "paper discusses",
+          "processing techniques"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "words": [
+          [
+            "meaningful content",
+            0.10118601279682399
+          ],
+          [
+            "natural language",
+            0.10108542018965293
+          ],
+          [
+            "natural",
+            0.10105878950620774
+          ],
+          [
+            "meaningful",
+            0.10104591618913165
+          ],
+          [
+            "language processing",
+            0.10104009507406204
+          ],
+          [
+            "processing",
+            0.10102996203573728
+          ],
+          [
+            "language",
+            0.10100032773497497
+          ],
+          [
+            "paper discusses",
+            0.10099367835625314
+          ],
+          [
+            "content machine",
+            0.10096599115095643
+          ],
+          [
+            "contains",
+            0.1009510322787291
+          ]
+        ],
+        "top_words": [
+          "meaningful content",
+          "natural language",
+          "natural",
+          "meaningful",
+          "language processing",
+          "processing",
+          "language",
+          "paper discusses",
+          "content machine",
+          "contains"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "words": [
+          [
+            "contains",
+            1.1000724160536097
+          ],
+          [
+            "learning",
+            1.10006698896177
+          ],
+          [
+            "content",
+            1.100050164712398
+          ],
+          [
+            "paper contains",
+            1.0999829677129793
+          ],
+          [
+            "meaningful",
+            1.0999540938257188
+          ],
+          [
+            "meaningful content",
+            1.0999207670204332
+          ],
+          [
+            "machine learning",
+            1.099874987320702
+          ],
+          [
+            "machine",
+            1.0997657911639378
+          ],
+          [
+            "contains meaningful",
+            1.0997472984461962
+          ],
+          [
+            "content machine",
+            1.0997467573665414
+          ]
+        ],
+        "top_words": [
+          "contains",
+          "learning",
+          "content",
+          "paper contains",
+          "meaningful",
+          "meaningful content",
+          "machine learning",
+          "machine",
+          "contains meaningful",
+          "content machine"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "words": [
+          [
+            "meaningful",
+            0.1011824191984572
+          ],
+          [
+            "language",
+            0.10108984045200749
+          ],
+          [
+            "meaningful content",
+            0.10107301160064106
+          ],
+          [
+            "paper discusses",
+            0.10105233614303225
+          ],
+          [
+            "discusses",
+            0.10103560140668284
+          ],
+          [
+            "discusses natural",
+            0.10103427744871997
+          ],
+          [
+            "natural",
+            0.10103185148876209
+          ],
+          [
+            "content",
+            0.10100492050066424
+          ],
+          [
+            "processing techniques",
+            0.10099033036600455
+          ],
+          [
+            "learning",
+            0.10098074605338665
+          ]
+        ],
+        "top_words": [
+          "meaningful",
+          "language",
+          "meaningful content",
+          "paper discusses",
+          "discusses",
+          "discusses natural",
+          "natural",
+          "content",
+          "processing techniques",
+          "learning"
+        ]
+      }
+    ],
+    "num_topics": 10
+  },
+  "lsa": {
+    "explained_variance_ratio": [
+      0.5000000000000004,
+      0.4999999999999994
+    ],
+    "total_explained_variance": 0.9999999999999998,
+    "topics": [
+      {
+        "topic_id": 0,
+        "words": [
+          [
+            "meaningful",
+            0.31622776601683805
+          ],
+          [
+            "machine learning",
+            0.31622776601683805
+          ],
+          [
+            "meaningful content",
+            0.31622776601683805
+          ],
+          [
+            "paper contains",
+            0.31622776601683805
+          ],
+          [
+            "content machine",
+            0.31622776601683805
+          ],
+          [
+            "learning",
+            0.31622776601683805
+          ],
+          [
+            "contains meaningful",
+            0.31622776601683805
+          ],
+          [
+            "content",
+            0.31622776601683805
+          ],
+          [
+            "machine",
+            0.31622776601683805
+          ],
+          [
+            "contains",
+            0.31622776601683794
+          ]
+        ],
+        "top_words": [
+          "meaningful",
+          "machine learning",
+          "meaningful content",
+          "paper contains",
+          "content machine",
+          "learning",
+          "contains meaningful",
+          "content",
+          "machine",
+          "contains"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "words": [
+          [
+            "techniques",
+            0.31622776601683794
+          ],
+          [
+            "processing techniques",
+            0.31622776601683794
+          ],
+          [
+            "processing",
+            0.31622776601683794
+          ],
+          [
+            "paper discusses",
+            0.31622776601683794
+          ],
+          [
+            "natural language",
+            0.31622776601683794
+          ],
+          [
+            "natural",
+            0.31622776601683794
+          ],
+          [
+            "language",
+            0.31622776601683794
+          ],
+          [
+            "language processing",
+            0.31622776601683794
+          ],
+          [
+            "discusses",
+            0.31622776601683794
+          ],
+          [
+            "discusses natural",
+            0.31622776601683794
+          ]
+        ],
+        "top_words": [
+          "techniques",
+          "processing techniques",
+          "processing",
+          "paper discusses",
+          "natural language",
+          "natural",
+          "language",
+          "language processing",
+          "discusses",
+          "discusses natural"
+        ]
+      }
+    ],
+    "num_topics": 2
+  }
+}

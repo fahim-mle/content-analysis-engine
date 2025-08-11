@@ -52,10 +52,10 @@ logger = get_logger(__name__)
 
 def load_ml_dataset(file_path: Path) -> Optional[Dict[str, List[Dict]]]:
     """
-    Load the machine learning dataset from a compressed JSON file.
+    Load the machine learning dataset from a JSON file (compressed or uncompressed).
 
     Args:
-        file_path: Path to the ml_dataset.json.gz file
+        file_path: Path to the ml_dataset.json or ml_dataset.json.gz file
 
     Returns:
         A dictionary containing the dataset or None if loading fails.
@@ -65,8 +65,16 @@ def load_ml_dataset(file_path: Path) -> Optional[Dict[str, List[Dict]]]:
         return None
     try:
         logger.info(f"Loading ML dataset from {file_path}...")
-        with gzip.open(file_path, "rt", encoding="utf-8") as f:
-            data = json.load(f)
+        
+        # Try to load as gzipped file first
+        if str(file_path).endswith('.gz'):
+            with gzip.open(file_path, "rt", encoding="utf-8") as f:
+                data = json.load(f)
+        else:
+            # Try regular JSON file
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                
         logger.info(
             f"Dataset loaded successfully with {len(data.get('papers', []))} papers "
             f"and {len(data.get('chunks', []))} chunks."

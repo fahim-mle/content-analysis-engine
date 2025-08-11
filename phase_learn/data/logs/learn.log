@@ -1,0 +1,25 @@
+[2025-08-12 09:25:04] INFO: Starting LDA and LSA topic modeling analysis
+[2025-08-12 09:25:04] ERROR: ML dataset file not found at: data/metadata/ml_dataset.json.gz
+[2025-08-12 09:25:49] INFO: Starting LDA and LSA topic modeling analysis
+[2025-08-12 09:25:49] ERROR: ML dataset file not found at: data/metadata/ml_dataset.json.gz
+[2025-08-12 09:25:55] INFO: Starting LDA and LSA topic modeling analysis
+[2025-08-12 09:25:55] ERROR: ML dataset file not found at: data/metadata/ml_dataset.json.gz
+[2025-08-12 09:26:06] INFO: Starting LDA and LSA topic modeling analysis
+[2025-08-12 09:26:06] INFO: Loading ML dataset from ../data/metadata/ml_dataset.json...
+[2025-08-12 09:26:06] ERROR: Failed to load or decode ML dataset file: Not a gzipped file (b'{"')
+[2025-08-12 09:26:28] INFO: Starting LDA and LSA topic modeling analysis
+[2025-08-12 09:26:28] INFO: Loading ML dataset from ../data/metadata/ml_dataset.json...
+[2025-08-12 09:26:28] INFO: Dataset loaded successfully with 2 papers and 0 chunks.
+[2025-08-12 09:26:28] INFO: Loaded 2 text documents for analysis
+[2025-08-12 09:26:28] INFO: Training LDA with 10 topics on 2 documents
+[2025-08-12 09:26:59] INFO: Starting LDA and LSA topic modeling analysis
+[2025-08-12 09:26:59] INFO: Loading ML dataset from ../data/metadata/ml_dataset.json...
+[2025-08-12 09:26:59] INFO: Dataset loaded successfully with 2 papers and 0 chunks.
+[2025-08-12 09:26:59] INFO: Loaded 2 text documents for analysis
+[2025-08-12 09:26:59] INFO: Training LDA with 10 topics on 2 documents
+[2025-08-12 09:26:59] INFO: LDA training completed
+[2025-08-12 09:26:59] INFO: Training LSA with 10 topics on 2 documents
+[2025-08-12 09:26:59] INFO: LSA training completed
+[2025-08-12 09:26:59] INFO: Evaluating topic models...
+[2025-08-12 09:27:01] INFO: Visualizations saved to data/models/topic_model/visualizations
+[2025-08-12 09:27:01] INFO: LDA and LSA analysis completed. Results saved to data/models/topic_model
