@@ -1,0 +1,11 @@
+feedparser
+requests
+PyPDF2
+pymongo
+chromadb
+scikit-learn
+bertopic
+sentence-transformers
+python-dotenv
+numpy
+pandas
