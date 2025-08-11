@@ -1,0 +1,30 @@
+# Virtual environment
+venv/
+
+# Byte-compiled Python files
+__pycache__/
+*.pyc
+
+# Data directory exclusions
+data/chunks/*.json
+data/chunks/*.json.gz
+data/cleaned_text/*.json
+data/cleaned_text/*.json.gz
+data/embeddings/
+data/extracted_text/
+data/logs/*.log
+data/metadata/*.json
+data/metadata/*.json.gz
+data/models/
+data/raw_pdfs/
+
+# ChromaDB exclusions
+chroma_db/
+
+# Reports
+reports/ml_pipeline_execution.json
+
+# OS generated files
+.DS_Store
+.env
+.venv
