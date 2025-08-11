@@ -28,3 +28,7 @@ reports/ml_pipeline_execution.json
 .DS_Store
 .env
 .venv
+
+# Claude related files
+.claude/
+CLAUDE.md
